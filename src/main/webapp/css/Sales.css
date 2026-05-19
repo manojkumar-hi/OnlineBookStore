@@ -1,0 +1,34 @@
+/* styles.css */
+.title {
+    text-align: center;
+    color: #007bff; /* Blue color for the title */
+    margin-top: 20px; /* Add some margin on top for spacing */
+    margin-bottom: 20px; /* Add some margin on bottom for spacing */
+}
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto; /* Center the table */
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Light gray border bottom */
+}
+
+th {
+    background-color: #007bff; /* Blue background for header */
+    color: #fff; /* White text for header */
+}
+
+tr:hover {
+    background-color: #f2f2f2; /* Light gray background on hover */
+}

@@ -1,0 +1,151 @@
+
+Implement NPM module usage:
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya (main)
+$ cd FS4
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya/FS4 (main)
+$ npm init -y
+Wrote to C:\Users\manoj\OneDrive\Desktop\karthikeya\FS4\package.json:
+
+{
+  "name": "fs4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya/FS4 (main)
+$ npm install chalk
+
+added 1 package, and audited 2 packages in 2s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya/FS4 (main)
+$ node sample.js
+(node:10852) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/manoj/OneDrive/Desktop/karthikeya/FS4/sample.js is not 
+specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\manoj\OneDrive\Desktop\karthikeya\FS4\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+This is a sample JavaScript file.
+It uses the chalk library for colored output.
+Make sure to run this in a Node.js environment!
+
+
+import chalk from "chalk";
+console.log(chalk.blue("This is a sample JavaScript file."));
+console.log(chalk.green("It uses the chalk library for colored output."));
+console.log(chalk.red("Make sure to run this in a Node.js environment!"));
+
+
+
+Implement CLI or REPL using Node JS:
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya (main)
+$ mkdir fsdemo
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya (main)
+$ cd fsdemo
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya/fsdemo (main)
+$ touch example.js
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya/fsdemo (main)
+$ echo "console.log("hello this is cli and repl")" > example.js
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya/fsdemo (main)
+$ node example.js
+hello this is cli and repl
+
+
+Implement global objects in node js:
+
+global.x = 42;
+console.log(global.x);
+
+console.log("Hello World");
+
+console.log(process.pid);
+
+const buf = Buffer.from("Hi");
+console.log(buf);
+
+console.log(__dirname);
+console.log(__filename);
+
+setTimeout(() => {
+  console.log("Message after 1 second");
+}, 1000);
+
+setInterval(() => {
+  console.log("Repeating message");
+}, 2000);
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya/fsdemo (main)
+$ node globj.js
+42
+Hello World
+28164
+<Buffer 48 69>
+C:\Users\manoj\OneDrive\Desktop\karthikeya\fsdemo
+C:\Users\manoj\OneDrive\Desktop\karthikeya\fsdemo\globj.js
+Message after 1 second
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+Repeating message
+
+
+Working with pre-defined modules of Node JS:
+
+import fs from "fs";
+
+
+fs.writeFileSync("sync.txt", "This is written synchronously");
+const syncData = fs.readFileSync("sync.txt", "utf-8");
+console.log("Sync Read:", syncData);
+
+
+fs.writeFile("async.txt", "This is written asynchronously", (err) => {
+  if (err) throw err;
+  fs.readFile("async.txt", "utf-8", (err, data) => {
+    if (err) throw err;
+    console.log("Async Read:", data);
+  });
+});
+
+
+manoj@MANOJ MINGW64 ~/OneDrive/Desktop/karthikeya/fsdemo (main)
+$ node example.js
+Sync Read: This is written synchronously
+Async Read: This is written asynchronously
+
+
